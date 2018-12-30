@@ -1,0 +1,25 @@
+.container{
+  display: inline-block;
+  margin-left: 5%;
+  height: 25%;
+  width: 15%;
+  background-color: white;
+  box-shadow: 3px 3px 25px #888888;
+  transition: 0.5s;
+}
+
+h1{
+  text-align: center;
+}
+
+.questions{
+  color: black;
+  margin-left: 2.5%;
+}
+
+.container:hover{
+  width: 16%;
+  height: 6%;
+  cursor: pointer;
+  box-shadow: 5px 5px 50px #888888;
+}

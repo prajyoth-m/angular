@@ -1,0 +1,28 @@
+<div class="mainForm">
+    <h1>Enter your Details</h1>
+    <form [formGroup]="myForm">
+    <div class="data">
+      <div class="uname">
+      <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Name" required>
+      </mat-form-field>
+      </div>
+      <div class="pass">
+          <mat-form-field appearance="outline">
+              <mat-label>Password</mat-label>
+              <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'" formControlName="password" [errorStateMatcher]="matcher" required>
+              <mat-icon matSuffix (click)="hide = !hide" style="cursor:pointer">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </mat-form-field>
+      </div>
+      <div class="cpass">
+          <mat-form-field appearance="outline">
+              <mat-label>Confirm Password</mat-label>
+              <input matInput placeholder="Confirm password" [type]="hide ? 'password' : 'text'" formControlName="cpassword" [errorStateMatcher]="matcher" required>
+              <mat-icon matSuffix (click)="hide = !hide" style="cursor:pointer">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              <mat-error *ngIf="myForm.hasError('notSame')">Passwords don't match</mat-error>
+            </mat-form-field>
+      </div>
+    </div>
+  </form>
+  </div>

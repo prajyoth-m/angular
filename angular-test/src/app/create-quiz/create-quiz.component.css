@@ -1,0 +1,15 @@
+.mainForm{
+  background-color: white;
+  height: 50%;
+  width:50%;
+  box-shadow: 5px 5px 15px #BDBDBD;
+  border-radius: 25px;
+}
+
+h1{
+  text-align: center;
+}
+
+.data{
+  text-align: center;
+}

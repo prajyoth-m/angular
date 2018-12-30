@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -17,4 +17,8 @@ export class SidenavComponent {
 
   constructor(private breakpointObserver: BreakpointObserver) {}
 
+  @Output() event = new EventEmitter();
+  nav(item) {
+    this.event.emit(item);
+  }
 }

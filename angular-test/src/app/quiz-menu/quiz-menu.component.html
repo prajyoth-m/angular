@@ -1,0 +1,8 @@
+<div class="container" *ngFor="let quiz of Quizes">
+  <div class="image">
+    <h1 >{{quiz.title}}</h1>
+    <img src="{{quiz.image}}" height=90% width=90% style="padding-left: 5%; padding-right: 5%">
+    <hr>
+    <p><span class="questions">Questions:</span> {{quiz.quos}}</p>
+  </div>
+</div>
